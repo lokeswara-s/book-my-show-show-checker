@@ -1,0 +1,15 @@
+{
+  "name": "boom-my-show-script",
+  "version": "1.0.0",
+  "description": "Script to check new shows available",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-html-parser": "^1.1.15",
+    "shelljs": "^0.8.3"
+  }
+}
