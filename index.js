@@ -1,4 +1,5 @@
 "use strict";
+var player = require('play-sound')({player: "C:/Program Files (x86)/VideoLAN/VLC/vlc.exe"})
 
 var shell = require('shelljs');
 var count = 0;
@@ -26,10 +27,11 @@ venueList.map(function(venue){
   })
 })
 if(rawTheaterList.length > count){
-  console.log("New Theater(s) opend for booking", "Next update in 10Sec")
-  //Do what ever you want here on new list
+  player.play('./bgm.mp3', { timeout: 300 }, function(err){
+  if (err) throw err
+})
   count = rawTheaterList.length;
 }else{
   console.log(rawTheaterList, new Date(),"Next update in 10Sec")
 }
-},30000)
+},5000)
